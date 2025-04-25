@@ -55,9 +55,9 @@ For **each segment**:
     - One can reshape it into a 6-th order tensor format, then compute the TT decomposition. The motivation is to take advantage of TT compression capabilities for high-order tensors, in other words to obtain higher compression
   - Parameters to play with:
     - the value of $\sigma$ - for real life noisy signals, we have to try different values
-    - the value of $d$ - this has an impact on the smoothing since higher value for $d$ leads to higher overlapping for the aggregation steps. (cell ""3. Extract patches per superpixel"")
-    - activate or not the 6-th order reshaping: set parameter "reshape_for_tt" to False or True (cell"" 4. Denoise each patch GROUP27"")
-    - n_segments for superpixel method (cell "2. Superpixel segmentation")
+    - the value of $d$ - this has an impact on the smoothing since higher value for $d$ leads to higher overlapping for the aggregation steps. 
+    - activate or not the 6-th order reshaping: set parameter "reshape_for_tt" to False or True 
+    - n_segments for superpixel method 
 
 ---
 
