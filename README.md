@@ -1,4 +1,4 @@
-# 🧠 SR_Project
+# 🧠 Super Resolution Image Project
 
 A lightweight post-processing toolbox to **reduce tiling artifacts in Super-Resolution (SR) images** using **patch-based denoising techniques**.  
 The core idea is to **leverage advanced image denoising methods** — based on **low-rank tensor decompositions (Tucker and Tensor Train)** — to smooth out local inconsistencies in SR outputs.
