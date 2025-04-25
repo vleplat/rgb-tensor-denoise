@@ -1,15 +1,3 @@
-# Directory structure:
-# tucker_denoise/
-# ├── __init__.py
-# ├── tucker2_lib.py
-# ├── io.py
-# ├── segmentation.py
-# ├── patches.py
-# ├── decomposition.py
-# ├── reconstruction.py
-# ├── metrics.py
-# └── demo_notebook.ipynb
-
 # Module: io.py
 import numpy as np
 import matplotlib.image as mpimg
