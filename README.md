@@ -88,3 +88,14 @@ Achieve **artifact-free, visually smooth reconstructions** of SR images by lever
 
 This method can also serve as a standalone **denoising tool** — but its primary value here is in **refining SR results**.
 
+---
+
+### 🚀 Future Work
+
+We are actively exploring enhancements including:
+
+- **Parallelized Patch Denoising**:  
+  Denoising across segments is **embarrassingly parallel** — a parallel implementation using `joblib`, `multiprocessing`, or GPU-backed tensor libraries is in progress.
+
+- **TT-based smoothing with Total Variation regularization** (experimental).
+
