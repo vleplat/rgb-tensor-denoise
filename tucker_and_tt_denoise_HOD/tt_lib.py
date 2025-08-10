@@ -6,7 +6,7 @@ from numpy import einsum
 from tensorly.tt_tensor import tt_to_tensor, TTTensor
 from tensorly.tt_matrix import tt_matrix_to_tensor, TTMatrix
 
-from tucker2_lib import fast_tucker2_denoising, tucker2_truncatedhosvd_init, tucker2_to_tensor, minrank_boundedtrace, tucker_truncatedhosvd_init, tucker_denoising # tucker2_truncatedhosvd_init_complex_tensor, fast_tucker2_denoising_complex_tensor
+from .tucker2_lib import fast_tucker2_denoising, tucker2_truncatedhosvd_init, tucker2_to_tensor, minrank_boundedtrace, tucker_truncatedhosvd_init, tucker_denoising # tucker2_truncatedhosvd_init_complex_tensor, fast_tucker2_denoising_complex_tensor
 
 
 

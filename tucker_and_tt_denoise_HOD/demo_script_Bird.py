@@ -7,6 +7,10 @@ import sys
 from datetime import datetime
 import time
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from tucker_and_tt_denoise_HOD.io import load_image, add_gaussian_noise
 from tucker_and_tt_denoise_HOD.segmentation import superpixel_segmentation
 from tucker_and_tt_denoise_HOD.patches import extract_clustered_patches
@@ -15,7 +19,7 @@ from tucker_and_tt_denoise_HOD.reconstruction import reconstruct_image_from_patc
 from tucker_and_tt_denoise_HOD.metrics import compute_quality_metrics
 
 
-def main(image_path="Datasets/parrot_small.jpg", sigma=0.075, method="tt_adaptive", reshape_for_tt=True, chosen_order = 6, n_segments=50, compactness=30, patch_size = 6, save_figures=True):
+def main(image_path="tucker_and_tt_denoise_HOD/Datasets/parrot_small.jpg", sigma=0.075, method="tt_adaptive", reshape_for_tt=True, chosen_order = 6, n_segments=50, compactness=30, patch_size = 6, save_figures=True):
     
     try:
         start_time = time.time()

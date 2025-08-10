@@ -1,8 +1,8 @@
 # Module: decomposition.py
 import copy
 import tensorly as tl
-from tucker2_lib import tucker_denoising, tucker_truncatedhosvd_init
-from tt_lib import tt_nestedtk2, tt_adcu
+from .tucker2_lib import tucker_denoising, tucker_truncatedhosvd_init
+from .tt_lib import tt_nestedtk2, tt_adcu
 import numpy as np
 
 def decompose_and_denoise_patch(X, method="tucker", sigma=0.075, tt_opts=None, tt_rank=None, reshape_for_tt=False, target_order=10):
