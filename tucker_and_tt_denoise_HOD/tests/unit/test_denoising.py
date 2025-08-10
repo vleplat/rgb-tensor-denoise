@@ -7,12 +7,8 @@ import sys
 import os
 sys.path.append('.')
 
-from tucker_and_tt_denoise_HOD.io import load_image, add_gaussian_noise
-from tucker_and_tt_denoise_HOD.segmentation import superpixel_segmentation
-from tucker_and_tt_denoise_HOD.patches import extract_clustered_patches
-from tucker_and_tt_denoise_HOD.decomposition import decompose_and_denoise_patch
-from tucker_and_tt_denoise_HOD.reconstruction import reconstruct_image_from_patches
-from tucker_and_tt_denoise_HOD.metrics import compute_quality_metrics
+from tucker_and_tt_denoise_HOD.utils import load_image, add_gaussian_noise, compute_quality_metrics
+from tucker_and_tt_denoise_HOD.core import superpixel_segmentation, extract_clustered_patches, decompose_and_denoise_patch, reconstruct_image_from_patches
 
 def test_denoising():
     """Test the complete denoising pipeline."""

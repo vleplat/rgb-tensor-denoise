@@ -157,7 +157,7 @@ print(f"PSNR: {psnr:.2f} dB, SSIM: {ssim:.4f}")
 
 ```bash
 # Run the bird image denoising demo
-python tucker_and_tt_denoise_HOD/demo_script_Bird.py
+python tucker_and_tt_denoise_HOD/demos/demo_script_Bird.py
 ```
 
 ### Jupyter Notebooks
@@ -167,14 +167,14 @@ python tucker_and_tt_denoise_HOD/demo_script_Bird.py
 jupyter notebook
 
 # Open and run the demo notebook:
-# - demo_notebook_tt_Bird.ipynb
+# - tucker_and_tt_denoise_HOD/demos/demo_notebook_tt_Bird.ipynb
 ```
 
 ### Testing
 
 ```bash
 # Run the test script to verify installation
-python test_denoising.py
+python tucker_and_tt_denoise_HOD/tests/unit/test_denoising.py
 ```
 
 ---
@@ -191,6 +191,50 @@ Typical results show:
 - **PSNR improvements** of 2-5 dB over noisy images
 - **SSIM improvements** of 0.1-0.3
 - **Effective noise suppression** while preserving edges and textures
+
+---
+
+## 📁 Project Structure
+
+```
+tucker_and_tt_denoise_HOD/
+├── __init__.py                 # Main package initialization
+├── core/                       # Core denoising functionality
+│   ├── __init__.py            # Core package exports
+│   ├── decomposition.py       # Tensor decomposition methods (Tucker/TT)
+│   ├── patches.py            # Patch extraction and grouping
+│   ├── reconstruction.py     # Image reconstruction from patches
+│   └── segmentation.py       # Superpixel segmentation
+├── utils/                      # Utility functions
+│   ├── __init__.py           # Utils package exports
+│   ├── io.py                 # Image loading/saving operations
+│   └── metrics.py            # Quality metrics (PSNR, SSIM)
+├── tensor_libs/               # Custom tensor libraries
+│   ├── __init__.py           # Tensor libs package
+│   ├── tucker2_lib.py        # Tucker decomposition implementation
+│   └── tt_lib.py             # Tensor Train decomposition implementation
+├── demos/                      # Demo scripts and notebooks
+│   ├── __init__.py           # Demos package
+│   ├── demo_script_Bird.py   # Complete denoising demo script
+│   └── demo_notebook_tt_Bird.ipynb  # Interactive Jupyter notebook
+├── tests/                      # Test suite
+│   ├── __init__.py           # Tests package
+│   └── unit/                 # Unit tests
+│       ├── __init__.py       # Unit tests package
+│       └── test_denoising.py # Main test script
+└── Datasets/                   # Sample images for testing
+    ├── parrot_small.jpg      # Small test image
+    ├── parrot.jpg            # Larger test image
+    └── ...                   # Other sample images
+```
+
+### Package Organization
+
+- **`core/`**: Contains the main denoising algorithms and pipeline components
+- **`utils/`**: Helper functions for I/O operations and quality assessment
+- **`tensor_libs/`**: Low-level tensor decomposition implementations
+- **`demos/`**: Ready-to-run examples and interactive notebooks
+- **`tests/`**: Test suite for validation and regression testing
 
 ---
 
