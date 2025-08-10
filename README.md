@@ -3,6 +3,8 @@
 A lightweight toolbox for **RGB image denoising** using **patch-based tensor decomposition techniques**.  
 The core idea is to **leverage advanced image denoising methods** — based on **low-rank tensor decompositions (Tucker and Tensor Train)** — to remove noise from RGB images while preserving important image details.
 
+**About:** A lightweight toolbox for RGB image denoising using patch-based tensor decomposition techniques. Leverages Tucker and Tensor Train (TT) decompositions to remove noise while preserving image details through superpixel-aware segmentation and adaptive compression.
+
 This package implements recent developments in **image denoising with tensor models** and provides a complete pipeline for RGB image denoising. It supports:
 - **Superpixel-based segmentation** to capture local spatial coherence,
 - **Patch grouping and higher-order tensor reshaping**,
@@ -21,14 +23,14 @@ This package implements recent developments in **image denoising with tensor mod
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/vleplat/SR_Project
    cd SR_Project
    ```
 
 2. **Create and activate a virtual environment:**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   python -m venv rgb_denoise_env
+   source rgb_denoise_env/bin/activate  # On Windows: rgb_denoise_env\Scripts\activate
    ```
 
 3. **Install dependencies:**
@@ -246,4 +248,15 @@ This implementation is based on research in tensor decompositions for image proc
 - Tensor Train (TT) decompositions for high-dimensional data
 - Superpixel-based image segmentation
 - Patch-based image processing techniques
+
+---
+
+## 📧 Support and Contact
+
+For questions, bug reports, or contributions, please contact:  
+**v dot leplat [at] innopolis dot ru**
+
+We welcome feedback, collaboration opportunities, and contributions to the RGB Image Denoising project.
+
+---
 
